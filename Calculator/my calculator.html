@@ -1,0 +1,37 @@
+<html> 
+	<head>
+		<script>
+			function addFunction() {
+			document.getElementById("result").value = parseFloat(document.getElementById("a").value)+parseFloat(document.getElementById("b").value);
+			}
+			function subFunction() {
+			document.getElementById("result").value = parseFloat(document.getElementById("a").value)-parseFloat(document.getElementById("b").value);
+			}
+			function mulFunction() {
+			document.getElementById("result").value = parseFloat(document.getElementById("a").value)*parseFloat(document.getElementById("b").value);
+			}
+			function divFunction() {
+			document.getElementById("result").value = parseFloat(document.getElementById("a").value)/parseFloat(document.getElementById("b").value);
+			}
+			function resetFunction() {
+			document.getElementById("myForm").reset();
+			}
+		</script>
+	</head>
+	<body>
+		<h1> My Calculator </h1>
+		<form id = "myForm">
+			<p> Enter First Value: </p>
+				<input id = "a" type="number">
+			<p> Enter Second Value: </p>
+				<input id = "b" type="number">
+			
+			<p> Operators: </p> 
+				<button type="button" onclick="addFunction()"> + </button> 
+				<button type="button" onclick="subFunction()"> - </button> 
+				<button type="button" onclick="mulFunction()"> * </button> 
+				<button type="button" onclick="divFunction()"> / </button>
+			<p> Result: <input id="result"> </p>  <input type = "button" value = "Reset" onClick = "resetFunction()"/>
+		</form>
+	</body>
+</html>
