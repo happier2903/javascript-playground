@@ -1,0 +1,102 @@
+<html>
+<center>
+  <head>
+    <title>Riddle Me</title>
+  </head>
+  
+  <body>
+    <h1>Riddle Generator</h1>
+	<img src="https://i.ytimg.com/vi/ai3WbWEy0tE/maxresdefault.jpg" alt="riddle me" width="400" height="230"/>
+	<br> <br>
+	<button class="riddle-btn" onclick="showRiddle()"> Riddle Me </button>
+	<div class ="riddle-content">
+
+	</div>
+	<button class="reveal-btn" onclick="revealAnswers()"> Answer </button>
+  </body>
+    
+  <style>
+	.riddle-btn {
+	background-color: maroon;
+	color: white;
+	padding: 15px 32px;
+	font-size: 20px;
+	display: inline-block;
+	margin: 4px 2px;
+	border: none;
+	cursor:pointer;
+	border-radius: 100%;
+	}
+	h1 {
+	color: #fff;
+	background-color: #008b6d;
+	padding: 12px 20px;
+	}
+	p {
+	color: rgb(5, 5, 5);
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 22px;
+	}
+	.reveal-btn {
+  	border: none;
+  	text-decoration: underline;
+  	margin: 0;
+	cursor:pointer;
+	background-color: white;
+	color:#180752;
+	padding: 15px 32px;
+	font-size: 16px;
+	}
+	#riddle-answer {
+	color:rgb(19, 139, 8);
+	font-weight: bold;
+	}
+  </style>
+ </center>
+</html>
+
+<script>
+	const riddles = [
+  { question: 'I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?', answer: 'An echo' },
+  { question: 'You measure my life in hours and I serve you by expiring. I’m quick when I’m thin and slow when I’m fat. The wind is my enemy. ', answer: 'A Candle' },
+  { question: 'I have cities, but no houses. I have mountains, but no trees. I have water, but no fish. What am I? ', answer: 'A Map' },
+  { question: 'What is seen in the middle of March and April that can’t be seen at the beginning or end of either month?', answer: 'The letter "R"' },
+  { question: 'You see a boat filled with people. It has not sunk, but when you look again you don’t see a single person on the boat. Why?', answer: 'All the people were married' },
+  { question: 'What word in the English language does the following: the first two letters signify a male, the first three letters signify a female, the first four letters signify a great, while the entire world signifies a great woman. What is the word?', answer: 'Heroine' }
+];
+
+function showRiddle() {
+	const randomRiddle = riddles[Math.floor((Math.random()*riddles.length))];
+	const { question, answer } = randomRiddle;
+
+	const questionElem = document.createElement('p');
+	const answerElem = document.createElement('p');
+
+	questionElem.textContent = question;
+	answerElem.textContent = ':: ' + answer + ' ::';
+	answerElem.setAttribute('id', 'riddle-answer');
+  	answerElem.hidden = true;
+
+	const container = document.querySelector('.riddle-content');
+
+	container.innerHTML = '';
+
+	container.appendChild(questionElem);
+  	container.appendChild(answerElem);
+}
+
+function revealAnswers() {
+	const container = document.querySelector('.riddle-content');
+	const riddle = container.querySelector('p');
+	const answer = document.querySelector('#riddle-answer');
+
+	if (riddle && answer.hidden) {
+		answer.hidden = false;
+	} else if (riddle) {
+		alert("The Answer is on the screen");
+	} else {
+		alert("You haven't opened any riddle! Click on 'Riddle me' button");
+	}
+}
+
+</script>
