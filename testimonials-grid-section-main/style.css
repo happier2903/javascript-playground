@@ -1,0 +1,129 @@
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+}
+
+#testimonial-grid-container {
+    padding: 5% 3%;
+}
+
+.grid-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+#testimonial-1 {
+    background-color: hsl(263, 55%, 52%);
+    color:hsl(0, 0%, 100%);
+    position: relative;
+    z-index: 0;
+}
+
+#testimonial-2 {
+    background-color: hsl(217, 19%, 35%);
+    color:hsl(0, 0%, 100%);
+}
+
+#testimonial-3 {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+}
+
+#testimonial-4 {
+    background-color: hsl(219, 29%, 14%);
+    color:hsl(0, 0%, 100%);
+}
+
+#testimonial-5 {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 3;
+}
+
+.header img {
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid hsl(0, 0%, 100%);
+}
+
+.grid-item h4 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+}
+
+.grid-item p {
+    opacity: 70%;
+}
+
+.grid-item .name {
+    opacity: 100%;
+    font-size: 1rem;
+}
+
+#quote {
+    position: absolute;
+    right: 15%;
+    z-index: 1;
+}
+
+@media (min-width: 576px) {
+    #testimonial-grid-container {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    #testimonial-5 {
+        flex-basis: 25%;
+    }
+    #main-left {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 73%;
+    }
+    /* Here is a simple way to set margins to all main-left items */
+    /* #main-left .grid-item {
+            margin-right: 20px;
+    } */
+    #top {
+        display: flex;
+        flex-basis: 50%;
+        justify-content: space-between;
+    }
+    #testimonial-1 {
+        flex-basis: 62%;
+    }
+    #testimonial-2 {
+        flex-basis: 35%
+    }
+    #bottom {
+        display: flex;
+        flex-basis: 50%;
+        justify-content: space-between;
+    }
+    #testimonial-3 {
+        flex-basis: 35%;
+    }
+    #testimonial-4 {
+        flex-basis: 62%;
+    }
+}
