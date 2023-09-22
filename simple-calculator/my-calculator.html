@@ -17,21 +17,65 @@
 			document.getElementById("myForm").reset();
 			}
 		</script>
+		<style>
+			body {
+				font-size: 20px;
+				font-family: Georgia, 'Times New Roman', Times, serif;
+				font-weight: 600;
+				text-align: center;
+			}
+			button {
+				background-color: rgb(44, 73, 103);
+				border: 1px solid black;
+				width: 40px;
+				height: 30px;
+				font-size: 20px;
+				border-radius: 20%;
+				color: white;
+			}
+
+			button:hover {
+				cursor: pointer;
+			}
+
+			.container {
+				background-color: rgb(175, 179, 182);
+				padding: 20px;
+				border-radius: 10px;
+				width:auto;
+				margin: 40px;
+			}
+
+			input {
+				width: auto;
+				height: 35px;
+				font-size: 18px;
+			}
+
+			h1 {
+				color: rgb(51, 101, 134);
+				margin-top: 20px;
+			}
+			
+		</style>
 	</head>
 	<body>
-		<h1> My Calculator </h1>
-		<form id = "myForm">
-			<p> Enter First Value: </p>
-				<input id = "a" type="number">
-			<p> Enter Second Value: </p>
-				<input id = "b" type="number">
-			
-			<p> Operators: </p> 
-				<button type="button" onclick="addFunction()"> + </button> 
-				<button type="button" onclick="subFunction()"> - </button> 
-				<button type="button" onclick="mulFunction()"> * </button> 
-				<button type="button" onclick="divFunction()"> / </button>
-			<p> Result: <input id="result"> </p>  <input type = "button" value = "Reset" onClick = "resetFunction()"/>
-		</form>
+		<h1> Calculator </h1>
+		<div class="container">
+			<form id = "myForm">
+				<p> Enter First Value: </p>
+					<input id = "a" type="number">
+				<p> Enter Second Value: </p>
+					<input id = "b" type="number">
+				
+				<p> Operators: </p> 
+					<button type="button" onclick="addFunction()"> + </button> 
+					<button type="button" onclick="subFunction()"> - </button> 
+					<button type="button" onclick="mulFunction()"> x </button> 
+					<button type="button" onclick="divFunction()"> / </button>
+				<p> Result: 
+					<br> <br> <input id="result"> </p>  <input type = "button" value = "Reset" onClick = "resetFunction()"/>
+			</form>
+		</div>
 	</body>
 </html>
