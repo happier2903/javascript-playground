@@ -1,0 +1,153 @@
+<div class="container">
+  <div class="display-box">
+    
+  </div>
+  <div class="row-1">
+    <button class="r1 clear" onclick= "clearAll()">C</button>
+<!--     <button class="r1 braces" onclick="braces()">( )</button> -->
+    <button class="r1 percentile operator" onclick="percentile()">%</button>
+    <button class="r1 division operator" onclick="division()">/</button>
+  </div>
+  <div class="row-2">
+    <button class="r2 seven number" onclick= "seven()">7</button>
+    <button class="r2 eight number" onclick= "eight()">8</button>
+    <button class="r2 nine number" onclick= "nine()">9</button>
+    <button class="r2 multiply operator" onclick="multiply()" >x</button>
+  </div>
+  <div class="row-3">
+    <button class="r3 four number" onclick= "four()">4</button>
+    <button class="r3 five number" onclick= "five()">5</button>
+    <button class="r3 six number" onclick= "six()">6</button>
+    <button class="r3 subtract operator" onclick= "subtract()">-</button>
+  </div>
+  <div class="row-4">
+    <button class="r4 one number" onclick= "one()">1</button>
+    <button class="r4 two number" onclick= "two()">2</button>
+    <button class="r4 three number" onclick= "three()">3</button>
+    <button class="r4 add operator" onclick= "add()">+</button>
+  </div>
+  <div class="row-5">
+<!--     <button class="r5 plus-or-minus" onclick= "plusOrMinus()">+/-</button> -->
+    <button class="r5 zero number" onclick= "zero()">0</button>
+    <button class="r5 dot" onclick= "dot()">.</button>
+    <button class="r5 equal-to" onclick= "equalTo()">=</button>
+  </div>
+</div>
+
+-------------------------------------------------
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+}
+
+.container {
+  background-color: lightsteelblue;
+  width: 280px;
+  height: 400px;
+/*   font-size: 28px; */
+  border: 6px solid lightsteelblue;
+/*   font-weight: 600; */
+  border-radius: 4px;
+}
+
+.display-box {
+  background-color: white;
+  width: 100%;
+  height: 20%;
+  border-radius: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  overflow: auto;
+}
+
+.display-box>* {
+  margin: 1px;
+  padding: 1px;
+}
+
+.row-1 {
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 2%;
+}
+
+.row-2 {
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.row-3 {
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.row-4 {
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.row-5 {
+  display: flex;
+}
+
+.r1, .r2, .r3, .r4, .r5  {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+/*   justify-content: center; */
+  padding: 12px;
+  border: none;
+  border-radius: 10%;
+  margin: 2px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Georgia, serif;
+/*   cursor: pointer; */
+}
+button {
+  cursor: pointer;
+}
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.r1 {
+  flex-grow: 1;
+  
+}
+
+.r2 {
+  flex-grow: 1;
+}
+
+.r3 {
+  flex-grow: 1;
+}
+
+.r4 {
+  flex-grow: 1;
+}
+
+.r5 {
+  flex-grow: 1;
+}
+
+.clear {
+  background-color: red;
+  color: white;
+}
+
+.equal-to {
+  background-color: darkgreen;
+  color: white;
+}
+
+
